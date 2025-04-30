@@ -1,11 +1,16 @@
-@import 'tailwindcss';
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Asset&display=swap"); /* eksempel på font URL */
 
 @plugin '@tailwindcss/typography';
 @plugin '@tailwindcss/forms';
 
+@plugin "daisyui" {
+  themes: light --default, dark --prefersdark, caramellatte;
+}
 
 @theme {
   /* Her tilføjes theme variable // tokens */
+  --font-asset: "Asset", serif; /*eksempel på font*/
 }
 
 @layer base {
@@ -18,9 +23,7 @@
   }
 }
 
-@layer components{
-
+@layer components {
 }
-@layer utilities{
-  
+@layer utilities {
 }

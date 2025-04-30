@@ -1,0 +1,95 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from '../components/Button.astro';
+import Heading from '../components/Heading.astro';
+import Link from '../components/Link.astro';
+import Card from '../components/Card.astro';
+import { Image } from 'astro:assets';
+import thumbsup from "../assets/images/thumbsup.png";
+---
+
+<MainLayout title="Titel">
+<!-- start på overskrift -->
+<section class="container mx-auto  m-sectiontop px-4 pt-20"> 
+    <h1 class="text-8xl m-sectionheading">Komponent bibliotek</h1> 
+    <h1 class="text-3xl m-sectionheading"></h1> 
+    <p>Komponent bibliotek til projekt daisyUI øvelse</p> 
+    <p>Komponent biblioteket samler de komponenter, der anvendes på sitet (på nær header/navbar og footer).</p> 
+    <hr class="mt-20 border-accent"> 
+</section>
+<!-- slut på overskrift -->
+
+       <!-- start på typografi -->
+<section class="container mx-auto m-sectiontop px-4 pt-20">
+    <Heading htmlheading="h2" size="large" stylingclasses="m-sectionheading">Typografi</Heading>
+    <Heading htmlheading="h1" size="xlarge">h1 xlarge</Heading>
+    <Heading htmlheading="h2" size="large">h2 large</Heading>
+    <Heading htmlheading="h3" size="medium">h3 medium</Heading>
+    <Heading htmlheading="h3" size="small">h4 small</Heading>
+    <p>Og her en sektion brødtekst</p>
+    <hr class="mt-20 border-accent">
+</section>
+<!-- slut på typografi -->
+
+<!-- start på links -->
+<section class="container mx-auto m-sectiontop px-4 pt-20">
+    <Heading htmlheading="h2" size="large" stylingclasses="m-sectionheading">Links</Heading>
+    <p><Link href="#">Default link</Link></p>
+    <p><Link href="#" variant="primary">Variant primary</Link></p>
+    <p><Link href="#" variant="primary" size="small">Variant primary size small</Link></p>
+    <p><Link href="#" variant="primary" size="medium">Variant primary size medium</Link></p>
+    <p><Link href="#" variant="primary" size="large">Variant primary size large</Link></p>
+    <p><Link href="#" variant="secondary" size="small">Variant secondary size small</Link></p>
+    <p><Link href="#" variant="secondary" size="medium">Variant secondary size medium</Link></p>
+    <p><Link href="#" variant="secondary" size="large">Variant secondary size large</Link></p>
+    <p><Link href="#" variant="neutral" size="small">Variant neutral size small</Link></p>
+    <p><Link href="#" variant="neutral" size="medium">Variant neutral size medium</Link></p>
+    <p><Link href="#" variant="neutral" size="large">Variant neutral size large</Link></p>
+    <hr class="mt-20 border-accent">
+</section>
+<!-- slut på links -->
+
+<!-- start på buttons -->
+<section class="container mx-auto m-sectiontop px-4 pt-20">
+    <Heading htmlheading="h2" size="large" stylingclasses="m-sectionheading">Buttons</Heading>
+    <p><Button>Default knap</Button></p>
+    <p><Button variant="primary">Variant primary</Button></p>
+    <p><Button variant="primary" size="small">Variant primary size small</Button></p>
+    <p><Button variant="primary" size="medium">Variant primary size medium</Button></p>
+    <p><Button variant="primary" size="large">Variant primary size large</Button></p>
+    <p><Button variant="secondary" size="small">Variant secondary size small</Button></p>
+    <p><Button variant="secondary" size="medium">Variant secondary size medium</Button></p>
+    <p><Button variant="secondary" size="large">Variant secondary size large</Button></p>
+     <p><Button variant="neutral" size="small">Variant neutral size small</Button></p>
+    <p><Button variant="neutral" size="medium">Variant neutral size medium</Button></p>
+    <p><Button variant="neutral" size="large">Variant neutral size large</Button></p>
+    <hr class="mt-20 border-accent">
+</section>
+<!-- slut på buttons -->
+
+<!-- start på cards -->
+<section class="container mx-auto m-sectiontop px-4 pt-20 pb-20"> 
+     <Heading htmlheading="h2" size="large" stylingclasses="m-sectionheading">Cards</Heading>
+    <p>Cards til projektet</p> 
+    <div class="max-w-sm"> 
+    <div class="card bg-base-100 w-full shadow-sm @container"> 
+    <figure class="relative"> 
+    <div class="badge badge-secondary absolute top-4 left-2">New pagne</div> 
+    <div class="badge badge-warning absolute rounded-full bottom-4 right-8 rotate-0 hover:rotate-6 transition-all"><span>35% discount!</span></div> 
+    <div class="badge badge-soft badge-neutral @sm:badge-xl absolute top-4 right-2">Almost soldout</div> 
+    <img src="/pagne.jpg" alt="Roséchampagne"> 
+    </figure> 
+    <div class="card-body"> 
+    <h2 class="card-title">Millésime</h2> 
+    <p>A little sweet, but it’s got that sharp kick—perfect balance, no cap. It’s like gold on your tongue, poppin’ notes of citrus and berries, with a finish that’s smooth as your best flow.</p> 
+    <div class="card-actions justify-end"> 
+        <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list -->
+        <a href="/singleview" target="_self" class="btn my-2 btn-outline btn-secondary">Køb rosévin!</a> 
+    </div> 
+    </div> 
+    </div> 
+    </div> 
+</section>
+<!-- slut på cards -->
+
+</MainLayout>

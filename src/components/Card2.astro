@@ -1,0 +1,29 @@
+---
+const { url="#", cardtitel="", cardtekst="",  cardrating = 0  } = Astro.props; 
+import Link from '../components/Link.astro';
+import Heading from '../components/Heading.astro';
+---
+
+<div class="card w-96 bg-orange-50 card-md shadow-xl">
+  <div class="card-body hover:scale-110 duration-300 ease-in-out">
+    <Heading htmlheading="h2" size="medium" stylingclasses="card-title">{cardtitel}</Heading>
+    <div class="rating">
+      {
+        Array.from({ length: 5 }, (_, i) => (
+          <div 
+            class={`mask mask-star ${i < cardrating ? 'bg-orange-500' : 'bg-orange-900'}`} 
+            aria-label={`${i + 1} star`}
+            aria-current={i + 1 === cardrating ? "true" : undefined}
+          ></div>
+        ))
+      }
+    </div>
+    <p class="text-sm md:text-sm leading-relaxed tracking-normal">
+  {cardtekst}
+</p>
+  </div>
+</div>
+
+
+
+

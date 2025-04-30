@@ -1,15 +1,665 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from '../components/Button.astro';
+import Card from '../components/Card.astro';
+import Card2  from '../components/Card2.astro';
+import Card3  from '../components/Card3.astro';
 import Link from '../components/Link.astro';
 import { Image } from 'astro:assets';
 import thumbsup from "../assets/images/thumbsup.png";
 ---
 <MainLayout title="Titel">
-	<article>
-		<h1>Index overskrift</h1>
-		<Button>Klik!</Button>
-		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-		<Image src={thumbsup} alt=""></Image>
-	</article>
+	 <!--Start på hero unit sektion -->
+<section class="relative h-screen w-full overflow-hidden">
+  <!-- Full-cover Image -->
+  <img src="hero.png" 
+       alt="Hero" 
+       class="absolute inset-0 w-full h-full object-cover z-0" />
+
+  <!-- Dark overlay -->
+  <div class="absolute inset-0 bg-black/30 z-10"></div>
+
+  <!-- Text container with adjusted mobile position -->
+  <div class="relative z-20 w-full h-full text-orange-50 font-serif font-normal flex flex-col justify-center items-start px-6 sm:px-12 pb-80">
+    <!-- HØJSKOLE (Responsive position) -->
+    <h1 class="text-6xl sm:text-6xl md:text-8xl xl:text-9xl leading-tight 
+               sm:text-left md:text-left xl:text-left sm:mt-12 md:mt-25 xl:mt-10">
+      HØJSKOLE
+    </h1>
+
+    <!-- I UDLANDET (Responsive position) -->
+    <h1 class="text-6xl sm:text-6xl md:text-8xl xl:text-9xl leading-tight 
+               sm:text-left md:text-left xl:text-left sm:mt-4 md:mt-8 xl:mt-4">
+      I UDLANDET
+    </h1>
+  </div>
+</section>
+	 <!--Slut på hero unit sektion -->
+
+   <!--Start på card  sektion -->
+   <section class="pt-20">
+    <div class="flex justify-center items-center space-x-4">
+        <h1 class="text-3xl sm:text-xl md:text-6xl text-center text-orange-900 font-serif font-normal pb-6 sm:pb-8">
+          VÆLG DIN
+        </h1>
+        <h1 class="text-3xl sm:text-xl md:text-6xl text-center text-orange-500 font-serif font-normal pb-6 sm:pb-8">
+          DESTINATION
+        </h1>
+    </div>
+       <div class="max-w-screen-xl mx-auto px-9">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 pt-8">
+      <Card
+        url="/singleview"
+        cardimage="20230326_224852_37C325.webp"
+        cardimagealt="Trip 1"
+        cardtitel="Maldiverne, Sri Lanka, Bali, Gili Island, Japan & Australien"
+        cardtekst="Varighed:"
+        cardtekst2="3 måneder"
+        cardtekst3="Pris:"
+        cardtekst4="89.900 kr.-"
+        cardbuttontekst="Læs mere! →"
+        badgenyt="false"
+        badgerabat="false"
+        badgefaatilbage="false"
+      ></Card>
+
+      <Card
+        url="/singleview"
+        cardimage="20221217_232124_5AA72F.webp"
+        cardimagealt="Trip 2"
+        cardtitel="Australien, New Zealand, Vietnam, Bali, Gili Island & Lombok"
+        cardtekst="Varighed:"
+        cardtekst2="4 måneder"
+        cardtekst3="Pris:"
+        cardtekst4="74.900 kr.-"
+        cardbuttontekst="Læs mere! →"
+        badgenyt="false"
+        badgerabat="false"
+        badgefaatilbage="false"
+      ></Card>
+
+      <Card
+        url="/singleview"
+        cardimage="20221210_161841_146567.webp"
+        cardimagealt="Trip 3"
+        cardtitel="Australien, New Zealand, Vietnam, Bali, Gili Island & Lombok"
+        cardtekst="Varighed:"
+        cardtekst2="5 måneder"
+        cardtekst3="Pris:"
+        cardtekst4="146.000 kr.-"
+        cardbuttontekst="Læs mere! →"
+        badgenyt="false"
+        badgerabat="false"
+        badgefaatilbage="false"
+      ></Card>
+     
+      </div>
+     <!-- Aligned Button -->
+    <div class="flex justify-end mt-5 pr-5">
+      <button class="bg-orange-900 hover:bg-orange-500 text-orange-50 p-3 rounded-xl font-normal font-serif">
+        Se alle rejser →
+      </button>
+       </div>
+   </section>
+    <!--Slut på card sektion -->
+
+   <!--Start på billede sektion -->
+     <section class="pt-20 px-4">
+  <h1 class="text-3xl sm:text-4xl md:text-5xl text-center font-serif font-normal pb-6 sm:pb-8">
+  ER DU KLAR TIL DIT LIVS EVENTYR?
+</h1>
+
+<h3 class="text-base sm:text-lg md:text-xl font-serif font-normal leading-relaxed max-w-3xl mx-auto  px-4">
+  HÖJSKOLENDK er en dansk højskole for unge i alderen ca. 18-30 år.<br>
+  Vi brænder for oplevelser, fællesskab og mødet med nye mennesker og kulturer.<br>
+  Derfor laver vi eventyrlige højskoleophold i udlandet.
+</h3>
+
+
+<!-- Container wrapper to unify layout -->
+<div class="max-w-screen-lg mx-auto px-4">
+
+  <!-- Image row -->
+  <div class="flex justify-center pt-10 overflow-x-auto">
+    <div class="flex flex-row space-x-6">
+      <div>
+        <img src="20230416_035311_9BB228.webp"
+          class="rounded-xl sm:rounded-2xl md:rounded-4xl w-40 sm:w-52 md:w-64 h-auto sm:h-72 md:h-90 object-cover" />
+      </div>
+      <div>
+        <img src="20230423_125316_49FEB8.webp"
+          class="rounded-xl sm:rounded-2xl md:rounded-4xl w-40 sm:w-52 md:w-64 h-auto sm:h-72 md:h-90 object-cover" />
+      </div>
+      <div>
+        <img src="20230720_064137_2F1B53.webp"
+          class="rounded-xl sm:rounded-2xl md:rounded-4xl w-40 sm:w-52 md:w-64 h-auto sm:h-72 md:h-90 object-cover" />
+      </div>
+      <div>
+        <img src="20230403_020825_28D846.webp"
+          class="rounded-xl sm:rounded-2xl md:rounded-4xl w-40 sm:w-52 md:w-64 h-auto sm:h-72 md:h-90 object-cover" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Text & Button Row -->
+  <div class="flex flex-col md:flex-row justify-between items-center gap-8 py-10">
+    <!-- Left Text -->
+    <div class="md:w-1/2">
+      <h3 class="text-base md:text-lg font-serif leading-relaxed">
+        HÖJSKOLENDK er noget for dig, hvis du vil på højskole i udlandet og er vild med højskolefællesskab, vil med på et
+        fantastisk rejseeventyr, glæder dig til at lære om fremmede kulturer, vil rejse med rygsæk, drømmer om en fed
+        grupperejse med andre skønne unge, vil opleve et stærkt sammenhold og ønsker inspirerende og meningsfuld
+        undervisning. <br> Du er sikker på en tryg rejseoplevelse da vi er medlem af Rejsegarantifonden.
+      </h3>
+    </div>
+
+   <!-- Right Side -->
+<div class="md:w-1/2 flex flex-col items-center md:items-end text-center md:text-right space-y-4">
+  <h3 class="text-base md:text-lg font-serif">
+    Vi glæder os til at lære dig at kende!
+  </h3>
+  <button class="bg-orange-900 hover:bg-orange-500 text-orange-50 text-xl p-3 rounded-xl self-center md:self-end font-normal font-serif">
+    Vælg dit eventyr 
+  </button>
+</div>
+
+  </div>
+
+</div>
+</section>
+    <!--Slut på billede sektion -->
+
+     <!--Start på info sektion -->
+       <section class="pt-20 px-4">
+        <h1 class="text-4xl sm:text-xl md:text-8xl text-center text-orange-500 font-serif font-normal pb-6 sm:pb-8">
+          Höjskolendk
+        </h1>
+
+<div class="max-w-screen-xl mx-auto px-4 pt-10">
+  <div class="flex flex-col md:flex-row justify-between items-stretch gap-8 min-h-[500px]">
+    
+    <!-- Left Side: Text -->
+    <div class="md:w-2/3 h-full">
+      <div class="h-full flex flex-col justify-between">
+        <h3 class="text-xl md:text-2xl font-serif font-bold leading-relaxed h-full">
+          REJSE HØJSKOLE
+        </h3>
+        <p class="text-lg md:text-base font-serif leading-relaxed h-full">
+          Der venter dig et unikt rejseeventyr når du tager på højskole i udlandet, med et stærkt sammenhold og fede rejseoplevelser. Med udgangspunkt i højskolens to grundværdier fællesskab og dannelse, kan du på højskole i udlandet bruge din sabbatår rejse på fx frivilligt arbejde, vilde adventure- og naturoplevelser, lære sprog og spændende personlig udvikling der giver dig mere selvtillid, selvindsigt og selvværd. Glæd dig også til inspirerende undervisning, der levende og aktivt forener det lærende med det legende.
+          <br><br>
+          Vores elever beskriver HÖJSKOLENDK som ”eventyrlige dannelsesrejser med noget på hjerte”. Udover det fantastiske rejseeventyr handler vores højskoleophold i udlandet om dine drømme, mål og ønsker for livet. På inspirerende og aktiv vis flytter du dine grænser og bliver en endnu stærkere udgave af dig selv. Vi tror på, at du kommer hjem med mere mod på alt hvad livet byder dig og er mere afklaret omkring hvad en meningsfuld fremtid er for dig.
+          <br><br>
+          Tag på højskole i udlandet hvis du har du lyst til at opleve verden, udleve dine rejsedrømme i et skønt fællesskab, blive inspireret af dygtige og engagerede undervisere og få et eventyr for livet.
+        </p>
+      </div>
+    </div>
+
+    <!-- Right Side: Image -->
+    <div class="md:w-1/3 h-full">
+      <img
+        src="20221217_232124_5AA72F.webp"
+        alt="Højskolendk Rejse"
+        class="rounded-4xl w-full h-full object-cover"
+      />
+    </div>
+
+  </div>
+</div>
+
+<div class="max-w-screen-xl mx-auto px-4 pt-10">
+  <div class="flex flex-col md:flex-row justify-between items-stretch gap-8 min-h-[500px]">
+    
+    <!-- Left Side: Image (1/3) -->
+    <div class="md:w-1/3 h-full">
+      <img
+        src="20230512_131621_2339EA.webp"
+        alt="Højskolendk Rejse"
+        class="rounded-4xl w-full h-110 object-cover"
+      />
+    </div>
+
+    <!-- Right Side: Text (2/3) -->
+    <div class="md:w-2/3 h-full">
+      <div class="h-full flex flex-col justify-between">
+        <h3 class="text-xl md:text-2xl font-serif font-bold leading-relaxed">
+          HØJSKOLEOPHOLD I UDLANDET
+        </h3>
+        <p class="text-lg md:text-base font-serif leading-relaxed mt-4">
+         Når du rejser på højskole i udlandet med HÖJSKOLENDK…
+         <br>
+         › bliver du en del af et fantastisk fællesskab med et stærkt sammenhold
+         <br> 
+         › får du masser af vilde naturoplevelser, adventure og spændende kulturmøder
+         <br>
+         › opdager du nye og stærke sider af dig selv, flytter grænser og får mere selvtillid
+         <br>
+         › rejser du altid med danske passionerede rejseledere og engagerede undervisere
+         <br>
+         › får du et uforglemmeligt, unikt og trygt rejseeventyr for livet
+        <br><br>
+         Med vores unikke kombination af højskole, grupperejser, rejseeventyr, frihed, kulturmøder og spændende undervisning, vil vi inspirere dig til at finde ind til hvad der er vigtigst for dig i livet – hvad du virkeligt brænder for og kan mærke er meningsfuldt – så du kan forfølge dine drømme.
+        <br><br>
+        Gå på opdagelse her på siden efter dit livs eventyr – på højskole i udlandet med HÖJSKOLENDK.
+        <br><br>
+        Velkommen!
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>
+     </section>
+      <!--Slut på info sektion -->
+
+<!--Start på trustpilot sektion -->
+  <section class="pt-20 px-4">
+   <div class="flex flex-col justify-center items-center space-y-4">
+  <div class="flex justify-center items-center space-x-4">
+    <h1 class="text-2xl sm:text-xl md:text-6xl text-center text-orange-900 font-serif font-normal pb-6 sm:pb-8">
+      TRUSTPILOT
+    </h1>
+    <h1 class="text-2xl sm:text-xl md:text-6xl text-center text-orange-500 font-serif font-normal pb-6 sm:pb-8">
+      ANMELDELSER
+    </h1>
+  </div>
+  <p class="text-base sm:text-lg md:text-2xl font-serif font-normal text-center mx-auto">
+    Læs alle vores anmeldelser på Trustpilot.dk
+  </p>
+</div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-screen-xl mx-auto px-4 py-8">
+  <!-- Left column: 2 stacked cards -->
+  <div class="flex flex-col space-y-6">
+    <Card2
+      url="/singleview"
+      cardtitel="Jakob Søgaard Skjold"
+      cardrating={4}
+      cardtekst="Den bedste beslutning jeg nogensinde har taget. Kæmpe stor anbefaling!! Det har givet mig en masse mod og lyst til at rejse."
+    />
+    <Card2
+      url="/singleview"
+      cardtitel="Emma A"
+      cardrating={5}
+      cardtekst="Var afsted med dem i 3 mega fede… Var afsted med dem i 3 mega fede måneder. En fantastisk oplevelse og en klar anbefaling her fra. Der er bare styr på tingen"
+    />
+  </div>
+
+  <!-- Center column: 1 centered card -->
+  <div class="flex items-center justify-center">
+    <Card2
+      url="/singleview"
+      cardtitel="Emma Magnusson"
+      cardrating={5}
+      cardtekst="Er du frisk på eventyr, så er HöjskolenDK noget for dig! I slut-april 2024 hjemvendte jeg fra mit livsrejse – Hawaii, Australien, Japan, Bali og Gili Islands. På mit højskoleophold blev jeg mødt af uforglemmelige oplevelser, spændende undervisning og nye venskaber. Tak til mine skønne rejseleder/underviser Henrik og Anne for netop at gøre, at denne rejse var så “well put together”, som den var. Og tak til de skønne mennesker, som jeg fik lov at dele disse hyggelige stunder med. Jeg kan derfor uden tvivl anbefale en hver, der er frisk på eventyr, at tage ud i verden med HöjskolenDK."
+    />
+  </div>
+
+  <!-- Right column: 2 stacked cards -->
+  <div class="flex flex-col space-y-6">
+    <Card2
+      url="/singleview"
+      cardtitel="Naia Klitgaard Aagesen"
+      cardrating={3}
+      cardtekst="En fantastisk oplevelse!! Kan klart anbefales🫶🏼 Man får et unikt sammenhold og kommer helt tæt på hinanden på kort tid. Gør det hvis du overvejer det!!💗"
+    />
+    <Card2
+      url="/singleview"
+      cardtitel="Aleyna Unsal"
+      cardrating={5}
+      cardtekst="HAJBG🫶🫶🫶🫶 Fedeste destinationer og rejseledere! Kæmpe oplevelse for livet som jeg aldrig kommer til at glemme🥲🫶❤️"
+    />
+  </div>
+</div>
+  </section>
+<!--Slut på trustpilot sektion -->
+
+<!--Start på infomøder sektion -->
+  <section class="pt-20 px-4">
+  <h1 class="text-3xl sm:text-4xl md:text-5xl text-center font-serif font-normal pb-6 sm:pb-8">
+  INFOMØDER
+</h1>
+
+<h3 class="text-base sm:text-lg md:text-xl font-serif font-normal leading-relaxed max-w-3xl mx-auto  px-4">
+  Hvis du drømmer om et fantastisk rejseeventyr med masser af adventure, vilde naturoplevelser og spændende kulturmøder så smut forbi et af vores hyggelige infomøder i København eller Aarhus – eller mød os på et online infomøde.
+</h3>
+
+<div class="max-w-screen-xl mx-auto px-4 py-4">
+  <!-- Top Row: Texts and Button -->
+  <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-4">
+    <!-- Left Text -->
+    <p class="text-xl font-serif text-orange-900 w-full md:w-1/3">
+      KØBENHAVN
+    </p>
+
+    <!-- Center Text -->
+    <p class="text-xl text-center font-serif text-orange-900 w-full md:w-1/3">
+      16. JANUAR 2026 // kl. 17-19
+    </p>
+
+    <!-- Right Button -->
+    <div class="w-full md:w-1/3 flex justify-center md:justify-end">
+      <button class="bg-orange-900 hover:bg-orange-500 text-orange-50 font-normal font-serif text-md p-3 rounded-xl">
+    SE EVENT → 
+  </button>
+    </div>
+  </div>
+
+  <!-- Horizontal Line -->
+  <hr class="mt-3 border-t-4 border-orange-600">
+</div>
+
+<div class="max-w-screen-xl mx-auto px-4 py-4">
+  <!-- Top Row: Texts and Button -->
+  <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-4">
+    <!-- Left Text -->
+    <p class="text-xl font-serif text-orange-900 w-full md:w-1/3">
+      AARHUS
+    </p>
+
+    <!-- Center Text -->
+    <p class="text-xl text-center font-serif text-orange-900 w-full md:w-1/3">
+      31. JANUAR 2026 // kl. 17-19
+    </p>
+
+    <!-- Right Button -->
+    <div class="w-full md:w-1/3 flex justify-center md:justify-end">
+      <button class="bg-orange-900 hover:bg-orange-500 text-orange-50 font-normal font-serif text-md p-3 rounded-xl">
+    SE EVENT → 
+  </button>
+    </div>
+  </div>
+
+  <!-- Horizontal Line -->
+  <hr class="mt-3 border-t-4 border-orange-600">
+</div>
+
+<div class="max-w-screen-xl mx-auto px-4 py-4">
+  <!-- Top Row: Texts and Button -->
+  <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-4">
+    <!-- Left Text -->
+    <p class="text-xl font-serif text-orange-900 w-full md:w-1/3">
+      ONLINE INFOMØDER
+    </p>
+
+    <!-- Center Text -->
+    <p class="text-xl text-center font-serif text-orange-900 w-full md:w-1/3">
+      15. FEBRUAR 2026 // kl. 18-20
+    </p>
+
+    <!-- Right Button -->
+    <div class="w-full md:w-1/3 flex justify-center md:justify-end">
+      <button class="bg-orange-900 hover:bg-orange-500 text-orange-50 font-normal font-serif text-md p-3 rounded-xl">
+    SE EVENT → 
+  </button>
+    </div>
+  </div>
+
+  <!-- Horizontal Line -->
+  <hr class="mt-3 border-t-4 border-orange-600">
+</div>
+
+<div class="max-w-screen-xl mx-auto px-4 py-4">
+  <!-- Top Row: Texts and Button -->
+  <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-4">
+    <!-- Left Text -->
+    <p class="text-xl font-serif text-orange-900 w-full md:w-1/3">
+      ONLINE INFOMØDER
+    </p>
+
+    <!-- Center Text -->
+    <p class="text-xl text-center font-serif text-orange-900 w-full md:w-1/3">
+      05. MARTS 2026 // kl. 18-20
+    </p>
+
+    <!-- Right Button -->
+    <div class="w-full md:w-1/3 flex justify-center md:justify-end">
+      <button class="bg-orange-900 hover:bg-orange-500 text-orange-50 font-normal font-serif text-md p-3 rounded-xl">
+    SE EVENT → 
+  </button>
+    </div>
+  </div>
+
+  <!-- Horizontal Line -->
+  <hr class="mt-3 border-t-4 border-orange-600">
+</div>
+
+
+  </section>
+<!--Slut på infomøder sektion -->
+
+<!--Start på banner sektion -->
+<section class="pt-10">
+<div class="bg-orange-200 py-8">
+   <div class="max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between text-center md:text-left">
+    <!-- Left Text -->
+    <p class="text-xl font-serif text-orange-900 mb-4 md:mb-0 w-full md:w-auto">
+      Reservér en plads på det eventyr du <span class="font-bold">drømmer</span> om - 
+      <br>
+      det er <span class="font-bold">gratis</span> og helt <span class="font-bold">uforpligtende</span> og sikrer dig besked inden der bliver udsolgt.
+    </p>
+
+    <!-- Right Button -->
+    <button class="bg-orange-900 hover:bg-orange-500 text-orange-50 font-normal font-serif text-md p-3 rounded-xl">
+    RESERVER PLADS → 
+  </button>
+  </div>
+</div>
+</section>
+ <!--Slut på banner sektion -->
+
+ <!--Start på Ansvar sektion -->
+<section class="pt-20 px-4">
+  <h1 class="text-3xl sm:text-4xl md:text-5xl text-center font-serif font-normal pb-6 sm:pb-8">
+  BÆREDYGTIGHED
+</h1>
+ <h1 class="text-3xl sm:text-4xl md:text-5xl text-center text-orange-500 font-serif font-normal pb-6 sm:pb-8">
+  VORES PLANET, VORES ANSVAR
+</h1>
+
+<p class="text-base sm:text-sm md:text-lg font-serif font-normal leading-relaxed max-w-3xl mx-auto  px-4">
+ I HÖJSKOLENDK brænder vi for at give vores elever et eventyrligt højskoleophold for livet. Så bæredygtigt som overhovedet muligt.
+<br><br>
+Vores ophold bringer os på tværs af kontinenter og landegrænser, ud på eksotiske destinationer og rundt i alle afkroge af verden, når vi som gruppe rejser ud for at udvide vores horisonter i mødet med andre kulturer, vilde naturoplevelser og spændende menneskemøder.
+<br><br>
+Sandheden er desværre, at det er hulens svært at opleve brøleaberne i Costa Ricas jungle, de fede surf-bølger på Hawaii eller Himalayas bjerge i Nepal, på et højskoleophold i udlandet, uden at flyve. Og flyrejser udleder desværre Co2.
+</p>
+
+
+<div class="max-w-screen-xl mx-auto px-4 pt-15">
+  <div class="flex flex-col md:flex-row justify-between items-stretch gap-8 min-h-[500px]">
+    
+    <!-- Left Side: Text -->
+    <div class="md:w-2/3 h-full">
+      <div class="h-full flex flex-col justify-between">
+        <h3 class="text-xl md:text-2xl font-serif font-bold leading-relaxed h-full">
+          Trees for the future – 50 træer for hver elev der rejser med os
+        </h3>
+        <p class="text-lg md:text-base font-serif leading-relaxed h-full pt-5">
+          Der venter dig et unikt rejseeventyr når du tager på højskole i udlandet, med et stærkt sammenhold og fede rejseoplevelser. Med udgangspunkt i højskolens to grundværdier fællesskab og dannelse, kan du på højskole i udlandet bruge din sabbatår rejse på fx frivilligt arbejde, vilde adventure- og naturoplevelser, lære sprog og spændende personlig udvikling der giver dig mere selvtillid, selvindsigt og selvværd. Glæd dig også til inspirerende undervisning, der levende og aktivt forener det lærende med det legende.
+          <br><br>
+          Vores elever beskriver HÖJSKOLENDK som ”eventyrlige dannelsesrejser med noget på hjerte”. Udover det fantastiske rejseeventyr handler vores højskoleophold i udlandet om dine drømme, mål og ønsker for livet. På inspirerende og aktiv vis flytter du dine grænser og bliver en endnu stærkere udgave af dig selv. Vi tror på, at du kommer hjem med mere mod på alt hvad livet byder dig og er mere afklaret omkring hvad en meningsfuld fremtid er for dig.
+          <br><br>
+          Tag på højskole i udlandet hvis du har du lyst til at opleve verden, udleve dine rejsedrømme i et skønt fællesskab, blive inspireret af dygtige og engagerede undervisere og få et eventyr for livet.
+        </p>
+      </div>
+    </div>
+
+    <!-- Right Side: Image -->
+    <div class="md:w-1/3 h-full">
+      <img
+        src="L5lonsnE.webp"
+        alt="Højskolendk Rejse"
+        class="rounded-4xl w-full h-110 object-cover"
+      />
+    </div>
+  </div>
+</div>
+
+<div class="max-w-screen-xl mx-auto px-4 pt-10">
+  <div class="flex flex-col md:flex-row justify-between items-stretch gap-8 min-h-[500px]">
+    
+    <!-- Left Side: Image (1/3) -->
+    <div class="md:w-1/3 h-full">
+      <img
+        src="nathan-hurst-EKoAI1sOwII-unsplash.webp"
+        alt="Højskolendk Rejse"
+        class="rounded-4xl w-full h-110 object-cover"
+      />
+    </div>
+
+    <!-- Right Side: Text (2/3) -->
+    <div class="md:w-2/3 h-full">
+      <div class="h-full flex flex-col justify-between">
+        <h3 class="text-xl md:text-2xl font-serif font-bold leading-relaxed">
+          Verdens Skove – 106.785m2 fredet regnskov
+        </h3>
+        <p class="text-lg md:text-base font-serif leading-relaxed mt-4 pt-5">
+         Som værdidrevet højskole er vores værdier særdeles vigtige – og én af vores kerneværdier er respekt. <br>Respekt er fundamentet i et højskolefællesskab, der bringer mennesker med forskellige baggrunde sammen både internt på enkelte elevhold samt i deres møde med fremmede kulturer. ”Leave No Trace” er ét eksempel og fortæller os vigtigheden af at besøge og efterlade et sted eller et land respektfuldt.
+          <br><br><br>
+          Alle vores elever har, før og efter deres højskoleophold, mulighed for at købe en HÖJSKOLENDK t-shirt, og penge derfra, går til køb og fredning af skovområder, rundt omkring i verden. <br> Vi er kun lige gået i gang, men har allerede fredet 106.785 m2 regnskov i Nicaragua. Dét er vi stolte af.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="max-w-screen-xl mx-auto px-4 pt-15">
+  <div class="flex flex-col md:flex-row justify-between items-stretch gap-8 min-h-[500px]">
+    
+    <!-- Left Side: Text -->
+    <div class="md:w-2/3 h-full">
+      <div class="h-full flex flex-col justify-between">
+        <h3 class="text-xl md:text-2xl font-serif font-bold leading-relaxed h-full">
+          World Animal Protection – dyrevelfærd på din rejse
+        </h3>
+        <p class="text-lg md:text-base font-serif leading-relaxed h-full pt-5">
+        En af de spændende ting ved at opleve verden, er at komme helt tæt på det eksotiske dyreliv man finder på vores eksotiske destinationer.<br> Det kan være alt fra tigere, aber, elefanter, delfiner og endda slanger for nogen.<br> Hver person sin smag, men fælles for os i HÖJSKOLENDK er at vi ikke ønsker, at vilde dyr skal leve et liv i fangenskab eller avles dertil.
+        <br><br>
+        Derfor udbyder, anbefaler eller opfordrer vi aldrig til aktiviteter eller underholdning, hvor dyr i fangenskab er involveret.<br> Vi opfordrer derimod til at opleve dyrene i det fri – tag på safari, tag et dykkercertifikat eller stå tidligt op og oplev dyrelivet udfolde sig autentisk. 
+        </p>
+      </div>
+    </div>
+
+    <!-- Right Side: Image -->
+    <div class="md:w-1/3 h-full">
+      <img
+        src="20230511_071849_AE63B2.webp"
+        alt="Højskolendk Rejse"
+        class="rounded-4xl w-full h-110 object-cover"
+      />
+    </div>
+  </div>
+</div>
+</section>
+ <!--Slut på Ansvar sektion -->
+
+<!--Start på Accordion sektion -->
+<section class="pt-10 px-30">
+ <h1 class="text-3xl sm:text-4xl md:text-7xl text-center font-serif font-normal pb-6 sm:pb-8">
+  HØJSKOLEOPHOLD
+</h1>
+ <h1 class="text-3xl sm:text-4xl md:text-7xl text-center text-orange-500 font-serif font-normal pb-6 sm:pb-8">
+  I UDLANDET
+</h1>
+<div class="pb-5">
+<div class="collapse collapse-arrow bg-orange-200 border border-base-300 rounded-4xl">
+  <input type="radio" name="my-accordion-2" checked="checked" />
+  <div class="collapse-title font-bold font-serif ">Højskole i udlandet for unge mennesker</div>
+  <div class="collapse-content font-normal font-serif text-sm">Drømmer du om at rejse på højskole i udlandet for unge?<br> Når du rejser med HÖJSKOLENDK, får du dit livs eventyr og vi garanterer dig masser af fællesskab, fantastiske oplevelser og meningsfuld læring.<br> Et højskoleophold i udlandet er noget, du bare skal prøve mindst én gang i dit liv – du vil aldrig fortryde, at du tog afsted.<br> Og du kan glæde dig til nye venskaber og oplevelser for livet.</div>
+</div>
+</div>
+
+<div class="pb-5">
+<div class="collapse collapse-arrow bg-orange-200 border border-base-300 rounded-4xl">
+  <input type="radio" name="my-accordion-2" checked="checked" />
+  <div class="collapse-title font-bold font-serif ">Hvor langt er et højskoleophold i udlandet?</div>
+  <div class="collapse-content font-normal font-serif text-sm">Højskoleophold i sommerferien er typisk kortere og varer ca. 5 uger.</div>
+</div>
+</div>
+
+<div class="pb-5">
+<div class="collapse collapse-arrow bg-orange-200 border border-base-300 rounded-4xl">
+  <input type="radio" name="my-accordion-2" checked="checked" />
+  <div class="collapse-title font-bold font-serif ">Hvor lange er rejserne udefor sommerferien?</div>
+  <div class="collapse-content font-normal font-serif text-sm">Vores højskoleophold i løbet af året varer mellem 2-3 måneder.<br> De rejser er oplagt for dig, der holder sabbatår og gerne vil ud og opleve verdenen hvor du udvikler dig selv på et personligt plan.</div>
+</div>
+</div>
+
+<div class="pb-5">
+<div class="collapse collapse-arrow bg-orange-200 border border-base-300 rounded-4xl">
+  <input type="radio" name="my-accordion-2" checked="checked" />
+  <div class="collapse-title font-bold font-serif ">Højskoleophold på Bali</div>
+  <div class="collapse-content font-normal font-serif text-sm">Med HÖJSKOLENDK kan du komme på rejsende højskole i stort set alle hjørner af verdenen.<br><br> Drømmer du om smukke og vilde naturoplevelser på Bali, Hawaii, Maldiverne eller i Australien?<br><br> Storbyseventyr i New York, Sydney, Tokyo, Bangkok eller Rio de Janeiro?<br><br> Kulturelle oplevelser og autentiske menneskemøder i Indien, Bolivia, Sri Lanka, Japan eller Mexico?<br><br> Fede adventure aktiviteter med masser af adrenalin i New Zealand, Nepal, Ecuador eller Costa Rica?<br><br> Vælg mellem et af vores fantastiske højskoleophold i udlandet og lad verden gøre dig endnu mere nysgerrig.</div>
+</div>
+</div>
+</section>
+ <!--Slut på Accordion sektion -->
+
+
+<!--Start på Accordion sektion -->
+<section class="pt-10 px-4">
+ <h1 class="text-3xl sm:text-4xl md:text-7xl text-center font-serif font-normal pb-6 sm:pb-8">
+  EN REJSEHØJSKOLE
+</h1>
+ <h1 class="text-3xl sm:text-4xl md:text-7xl text-center text-orange-500 font-serif font-normal pb-6 sm:pb-8">
+  FYLDT MED OPLEVELSER
+</h1>
+<p class="text-base sm:text-sm md:text-lg font-serif font-normal leading-relaxed max-w-3xl mx-auto  px-4">
+Vil du gerne på højskole i udlandet, tilbyder vi de mest attraktive højskoleophold i udlandet, hvor du besøger flere skønne og spændende lande og deltage i spændende og inspirerende undervisning og alverdens fede aktiviteter.
+<br>
+Din højskole rejse kan blandt andet indeholde:
+</p>
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-screen-xl mx-auto px-4 py-8">
+  <!-- Left column: 2 stacked cards -->
+  <div class="flex flex-col space-y-6">
+     <Card3
+      url="/singleview"
+      cardtitel="Teambuilding"
+      cardimage="icon.png"
+      cardimagealt="Aleyna Unsal"
+      cardtekst="Hvorfor tage på et kedeligt kursus i Danmark, når du kan rejse ud i verden og udvikle dig samtidig? Du rejser sammen med andre unge voksne og lærer en hel masse om samarbejde, relationer, fællesskab, konflikter, styrker og stærke teams. Du får ikke blot rejse-erfaring på cv’et, men også et væld af brugbare redskaber til studie eller karriere."
+    />
+     <Card3
+      url="/singleview"
+      cardtitel="Friuger – et væld af muligheder"
+      cardimage="globus.png"
+      cardimagealt="Aleyna Unsal"
+      cardtekst="Efter spændende og lærerige undervisningsforløb, har vi – alt efter hvilken højskole rejse du vælger – lagt én eller flere friuger ind. Her har I mulighed for selv at tage styringen og udforske dét land, kontinent eller ø-rige vi befinder os i. Friugerne bliver brugt på forskellig vis og oftest deler holdet sig op i lidt mindre grupper for at tage på eventyr – andre gange rejser hele holdet sammen på en fed friuge."
+    />
+  </div>
+
+  <!-- Center column: 1 centered card -->
+  <div class="flex items-start justify-center">
+     <Card3
+      url="/singleview"
+      cardtitel="Vilde naturoplevelser"
+      cardimage="bjerg.png"
+      cardimagealt="Aleyna Unsal"
+      cardtekst="Ingen rejse ud i verden uden eventyrlige og vilde naturoplevelser. Mange af de destinationer, hvor vi tager på højskoleophold, byder på enestående og overdådig natur. Det kan være alt fra snorkleture i Caribien, river rafting i Thailand, spotte brøleaber i Costa Ricas regnskove, gå på opdagelse i Inka-ruinerne i Mexico, trekke i Himalayas bjerge i Nepal, sejle kajak i marine nationalparker, dykke med manta rays på Hawaii, vandre i New Zealands fabelagtige nationalparker eller tage på safari i Sri Lanka og se leoparder, elefanter og bjørne. Alle vores rejser er fyldt med storslåede oplevelser, som du aldrig vil glemme. Uanset om du elsker havets dyb eller bjergenes højder, får du mulighed for at opleve naturens magi helt tæt på. Vi tror på, at det at være i naturen – at mærke vinden i håret, solen på huden og jorden under fødderne – styrker både krop og sind. Det handler ikke kun om at se verden, men om virkelig at mærke den, leve i nuet og skabe minder, der varer hele livet. Du kommer ikke bare hjem med et pas fyldt med stempler, men med et hjerte fyldt med eventyr."
+    />
+  </div>
+
+  <!-- Right column: 2 stacked cards -->
+  <div class="flex flex-col space-y-6">
+     <Card3
+      url="/singleview"
+      cardtitel="Frivilligt arbejde og Kulturforståelse"
+      cardimage="haend.png"
+      cardimagealt="Aleyna Unsal"
+      cardtekst="Drømmer du om at lave frivilligt arbejde og gøre en forskel i et andet land? Mange af vores højskole rejser inkluderer frivilligt arbejde, hvor vi kommer helt tæt på de lokale. Det giver dig en unik indsigt i landet, større forståelse for kulturen og måden man lever på i de forskellige lande."
+    />
+    <Card3
+      url="/singleview"
+      cardtitel="Spændende kulturoplevelser"
+      cardimage="hus.png"
+      cardimagealt="Aleyna Unsal"
+      cardtekst="Kulturen er vigtig at opleve, når man befinder sig i et nyt land. Det giver dig både nogle rigtigt spændende oplevelser og menneske-møder, men også en unik indsigt, du ikke kan læse dig til i en bog eller se i et rejseprogram. På vores højskole ture kan du opleve alt fra ældgamle Hindu-templer i Indien, surf-kulturen på Hawaii, Mayaindianerne i Guatemala, de gamle inkaruiner i Mexico, buddhisme i Thailand, te-plantager i Sri Lanka."
+    />
+  </div>
+</div>
+
+
+</section>
+<!--Slut på Accordion sektion -->
 </MainLayout>
