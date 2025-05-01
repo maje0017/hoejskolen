@@ -20,15 +20,15 @@ import thumbsup from "../assets/images/thumbsup.png";
   <div class="absolute inset-0 bg-black/30 z-10"></div>
 
   <!-- Text container with adjusted mobile position -->
-  <div class="relative z-20 w-full h-full text-orange-50 font-serif font-normal flex flex-col justify-center items-start px-6 sm:px-12 pb-80">
+  <div class="relative z-20 w-full h-full text-orange-50 font-serif font-normal flex flex-col justify-center items-start px-6 sm:px-12 pb-70">
     <!-- HØJSKOLE (Responsive position) -->
-    <h1 class="text-6xl sm:text-6xl md:text-8xl xl:text-9xl leading-tight 
+    <h1 class="text-6xl sm:text-6xl md:text-8xl xl:text-8xl leading-tight 
                sm:text-left md:text-left xl:text-left sm:mt-12 md:mt-25 xl:mt-10">
       HØJSKOLE
     </h1>
 
     <!-- I UDLANDET (Responsive position) -->
-    <h1 class="text-6xl sm:text-6xl md:text-8xl xl:text-9xl leading-tight 
+    <h1 class="text-6xl sm:text-6xl md:text-8xl xl:text-8xl leading-tight 
                sm:text-left md:text-left xl:text-left sm:mt-4 md:mt-8 xl:mt-4">
       I UDLANDET
     </h1>
@@ -56,7 +56,7 @@ import thumbsup from "../assets/images/thumbsup.png";
         cardtekst="Varighed:"
         cardtekst2="3 måneder"
         cardtekst3="Pris:"
-        cardtekst4="89.900 kr.-"
+        cardtekst4="89.900.-"
         cardbuttontekst="Læs mere! →"
         badgenyt="false"
         badgerabat="false"
@@ -71,7 +71,7 @@ import thumbsup from "../assets/images/thumbsup.png";
         cardtekst="Varighed:"
         cardtekst2="4 måneder"
         cardtekst3="Pris:"
-        cardtekst4="74.900 kr.-"
+        cardtekst4="74.900.-"
         cardbuttontekst="Læs mere! →"
         badgenyt="false"
         badgerabat="false"
@@ -86,7 +86,7 @@ import thumbsup from "../assets/images/thumbsup.png";
         cardtekst="Varighed:"
         cardtekst2="5 måneder"
         cardtekst3="Pris:"
-        cardtekst4="146.000 kr.-"
+        cardtekst4="146.000.-"
         cardbuttontekst="Læs mere! →"
         badgenyt="false"
         badgerabat="false"
@@ -95,7 +95,7 @@ import thumbsup from "../assets/images/thumbsup.png";
      
       </div>
      <!-- Aligned Button -->
-    <div class="flex justify-end mt-5 pr-5">
+    <div class="flex justify-center mt-5 pr-5">
       <button class="bg-orange-900 hover:bg-orange-500 text-orange-50 p-3 rounded-xl font-normal font-serif">
         Se alle rejser →
       </button>
@@ -154,7 +154,7 @@ import thumbsup from "../assets/images/thumbsup.png";
     </div>
 
    <!-- Right Side -->
-<div class="md:w-1/2 flex flex-col items-center md:items-end text-center md:text-right space-y-4">
+<div class="md:w-1/2 flex flex-col md:items-end text-center md:text-right space-y-4 pb-45">
   <h3 class="text-base md:text-lg font-serif">
     Vi glæder os til at lære dig at kende!
   </h3>
@@ -263,8 +263,8 @@ import thumbsup from "../assets/images/thumbsup.png";
     </h1>
   </div>
   <p class="text-base sm:text-lg md:text-2xl font-serif font-normal text-center mx-auto">
-    Læs alle vores anmeldelser på Trustpilot.dk
-  </p>
+  Læs alle vores anmeldelser på <a href="https://www.trustpilot.dk" class="text-orange-600 underline hover:text-orange-900">Trustpilot.dk</a>
+</p>
 </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-screen-xl mx-auto px-4 py-8">
@@ -273,7 +273,7 @@ import thumbsup from "../assets/images/thumbsup.png";
     <Card2
       url="/singleview"
       cardtitel="Jakob Søgaard Skjold"
-      cardrating={4}
+      cardrating={5}
       cardtekst="Den bedste beslutning jeg nogensinde har taget. Kæmpe stor anbefaling!! Det har givet mig en masse mod og lyst til at rejse."
     />
     <Card2
@@ -299,7 +299,7 @@ import thumbsup from "../assets/images/thumbsup.png";
     <Card2
       url="/singleview"
       cardtitel="Naia Klitgaard Aagesen"
-      cardrating={3}
+      cardrating={5}
       cardtekst="En fantastisk oplevelse!! Kan klart anbefales🫶🏼 Man får et unikt sammenhold og kommer helt tæt på hinanden på kort tid. Gør det hvis du overvejer det!!💗"
     />
     <Card2
@@ -616,15 +616,15 @@ Din højskole rejse kan blandt andet indeholde:
      <Card3
       url="/singleview"
       cardtitel="Teambuilding"
-      cardimage="icon.png"
-      cardimagealt="Aleyna Unsal"
+      cardimage="icon.jpeg"
+      cardimagealt="icon"
       cardtekst="Hvorfor tage på et kedeligt kursus i Danmark, når du kan rejse ud i verden og udvikle dig samtidig? Du rejser sammen med andre unge voksne og lærer en hel masse om samarbejde, relationer, fællesskab, konflikter, styrker og stærke teams. Du får ikke blot rejse-erfaring på cv’et, men også et væld af brugbare redskaber til studie eller karriere."
     />
      <Card3
       url="/singleview"
       cardtitel="Friuger – et væld af muligheder"
       cardimage="globus.png"
-      cardimagealt="Aleyna Unsal"
+      cardimagealt="globus"
       cardtekst="Efter spændende og lærerige undervisningsforløb, har vi – alt efter hvilken højskole rejse du vælger – lagt én eller flere friuger ind. Her har I mulighed for selv at tage styringen og udforske dét land, kontinent eller ø-rige vi befinder os i. Friugerne bliver brugt på forskellig vis og oftest deler holdet sig op i lidt mindre grupper for at tage på eventyr – andre gange rejser hele holdet sammen på en fed friuge."
     />
   </div>
@@ -635,7 +635,7 @@ Din højskole rejse kan blandt andet indeholde:
       url="/singleview"
       cardtitel="Vilde naturoplevelser"
       cardimage="bjerg.png"
-      cardimagealt="Aleyna Unsal"
+      cardimagealt="bjerg"
       cardtekst="Ingen rejse ud i verden uden eventyrlige og vilde naturoplevelser. Mange af de destinationer, hvor vi tager på højskoleophold, byder på enestående og overdådig natur. Det kan være alt fra snorkleture i Caribien, river rafting i Thailand, spotte brøleaber i Costa Ricas regnskove, gå på opdagelse i Inka-ruinerne i Mexico, trekke i Himalayas bjerge i Nepal, sejle kajak i marine nationalparker, dykke med manta rays på Hawaii, vandre i New Zealands fabelagtige nationalparker eller tage på safari i Sri Lanka og se leoparder, elefanter og bjørne. Alle vores rejser er fyldt med storslåede oplevelser, som du aldrig vil glemme. Uanset om du elsker havets dyb eller bjergenes højder, får du mulighed for at opleve naturens magi helt tæt på. Vi tror på, at det at være i naturen – at mærke vinden i håret, solen på huden og jorden under fødderne – styrker både krop og sind. Det handler ikke kun om at se verden, men om virkelig at mærke den, leve i nuet og skabe minder, der varer hele livet. Du kommer ikke bare hjem med et pas fyldt med stempler, men med et hjerte fyldt med eventyr."
     />
   </div>
@@ -646,14 +646,14 @@ Din højskole rejse kan blandt andet indeholde:
       url="/singleview"
       cardtitel="Frivilligt arbejde og Kulturforståelse"
       cardimage="haend.png"
-      cardimagealt="Aleyna Unsal"
+      cardimagealt="hånd"
       cardtekst="Drømmer du om at lave frivilligt arbejde og gøre en forskel i et andet land? Mange af vores højskole rejser inkluderer frivilligt arbejde, hvor vi kommer helt tæt på de lokale. Det giver dig en unik indsigt i landet, større forståelse for kulturen og måden man lever på i de forskellige lande."
     />
     <Card3
       url="/singleview"
       cardtitel="Spændende kulturoplevelser"
       cardimage="hus.png"
-      cardimagealt="Aleyna Unsal"
+      cardimagealt="hus"
       cardtekst="Kulturen er vigtig at opleve, når man befinder sig i et nyt land. Det giver dig både nogle rigtigt spændende oplevelser og menneske-møder, men også en unik indsigt, du ikke kan læse dig til i en bog eller se i et rejseprogram. På vores højskole ture kan du opleve alt fra ældgamle Hindu-templer i Indien, surf-kulturen på Hawaii, Mayaindianerne i Guatemala, de gamle inkaruiner i Mexico, buddhisme i Thailand, te-plantager i Sri Lanka."
     />
   </div>
