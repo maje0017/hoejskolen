@@ -11,10 +11,12 @@ import thumbsup from "../assets/images/thumbsup.png";
 <MainLayout title="Titel">
 <!-- start på overskrift -->
 <section class="container mx-auto  m-sectiontop px-4 pt-20"> 
-    <h1 class="text-8xl m-sectionheading">Komponent bibliotek</h1> 
+    <h1 class="text-8xl font-normal font-serif m-sectionheading">Komponent bibliotek</h1> 
     <h1 class="text-3xl m-sectionheading"></h1> 
-    <p>Komponent bibliotek til projekt daisyUI øvelse</p> 
+    <div class="font-normal font-serif pt-5">
+    <p>Komponent bibliotek til projekt Höjskolendk</p> 
     <p>Komponent biblioteket samler de komponenter, der anvendes på sitet (på nær header/navbar og footer).</p> 
+    </div>
     <hr class="mt-20 border-accent"> 
 </section>
 <!-- slut på overskrift -->
@@ -22,11 +24,15 @@ import thumbsup from "../assets/images/thumbsup.png";
        <!-- start på typografi -->
 <section class="container mx-auto m-sectiontop px-4 pt-20">
     <Heading htmlheading="h2" size="large" stylingclasses="m-sectionheading">Typografi</Heading>
-    <Heading htmlheading="h1" size="xlarge">h1 xlarge</Heading>
-    <Heading htmlheading="h2" size="large">h2 large</Heading>
-    <Heading htmlheading="h3" size="medium">h3 medium</Heading>
-    <Heading htmlheading="h3" size="small">h4 small</Heading>
+    <Heading htmlheading="h1" size="xlarge">H1 xlarge</Heading>
+    <Heading htmlheading="h2" size="large">H2 large</Heading>
+    <Heading htmlheading="h3" size="mediumbold">H3 medium</Heading>
+    <Heading htmlheading="h3" size="medium">H3 medium</Heading>
+    <Heading htmlheading="h6" size="smallbold">H6 small bold</Heading>
+    <Heading htmlheading="h6" size="small">H6 small</Heading>
+    <div class="font-normal font-serif">
     <p>Og her en sektion brødtekst</p>
+    </div>
     <hr class="mt-20 border-accent">
 </section>
 <!-- slut på typografi -->
@@ -35,16 +41,9 @@ import thumbsup from "../assets/images/thumbsup.png";
 <section class="container mx-auto m-sectiontop px-4 pt-20">
     <Heading htmlheading="h2" size="large" stylingclasses="m-sectionheading">Links</Heading>
     <p><Link href="#">Default link</Link></p>
-    <p><Link href="#" variant="primary">Variant primary</Link></p>
-    <p><Link href="#" variant="primary" size="small">Variant primary size small</Link></p>
-    <p><Link href="#" variant="primary" size="medium">Variant primary size medium</Link></p>
-    <p><Link href="#" variant="primary" size="large">Variant primary size large</Link></p>
-    <p><Link href="#" variant="secondary" size="small">Variant secondary size small</Link></p>
-    <p><Link href="#" variant="secondary" size="medium">Variant secondary size medium</Link></p>
-    <p><Link href="#" variant="secondary" size="large">Variant secondary size large</Link></p>
-    <p><Link href="#" variant="neutral" size="small">Variant neutral size small</Link></p>
-    <p><Link href="#" variant="neutral" size="medium">Variant neutral size medium</Link></p>
-    <p><Link href="#" variant="neutral" size="large">Variant neutral size large</Link></p>
+    <div class="pt-5">
+    <p><Link href="#" variant="primary" size="small">Variant primary</Link></p>
+    </div>
     <hr class="mt-20 border-accent">
 </section>
 <!-- slut på links -->
@@ -52,43 +51,81 @@ import thumbsup from "../assets/images/thumbsup.png";
 <!-- start på buttons -->
 <section class="container mx-auto m-sectiontop px-4 pt-20">
     <Heading htmlheading="h2" size="large" stylingclasses="m-sectionheading">Buttons</Heading>
+    <div class="pt-5">
     <p><Button>Default knap</Button></p>
-    <p><Button variant="primary">Variant primary</Button></p>
-    <p><Button variant="primary" size="small">Variant primary size small</Button></p>
-    <p><Button variant="primary" size="medium">Variant primary size medium</Button></p>
-    <p><Button variant="primary" size="large">Variant primary size large</Button></p>
-    <p><Button variant="secondary" size="small">Variant secondary size small</Button></p>
-    <p><Button variant="secondary" size="medium">Variant secondary size medium</Button></p>
-    <p><Button variant="secondary" size="large">Variant secondary size large</Button></p>
-     <p><Button variant="neutral" size="small">Variant neutral size small</Button></p>
-    <p><Button variant="neutral" size="medium">Variant neutral size medium</Button></p>
-    <p><Button variant="neutral" size="large">Variant neutral size large</Button></p>
+    </div>
+    <div class="pt-5">
+     <p><Button variant="primary" size="small">Variant primary</Button></p>
+    </div>
     <hr class="mt-20 border-accent">
 </section>
 <!-- slut på buttons -->
 
 <!-- start på cards -->
 <section class="container mx-auto m-sectiontop px-4 pt-20 pb-20"> 
-     <Heading htmlheading="h2" size="large" stylingclasses="m-sectionheading">Cards</Heading>
-    <p>Cards til projektet</p> 
-    <div class="max-w-sm"> 
-    <div class="card bg-base-100 w-full shadow-sm @container"> 
-    <figure class="relative"> 
-    <div class="badge badge-secondary absolute top-4 left-2">New pagne</div> 
-    <div class="badge badge-warning absolute rounded-full bottom-4 right-8 rotate-0 hover:rotate-6 transition-all"><span>35% discount!</span></div> 
-    <div class="badge badge-soft badge-neutral @sm:badge-xl absolute top-4 right-2">Almost soldout</div> 
-    <img src="/pagne.jpg" alt="Roséchampagne"> 
-    </figure> 
-    <div class="card-body"> 
-    <h2 class="card-title">Millésime</h2> 
-    <p>A little sweet, but it’s got that sharp kick—perfect balance, no cap. It’s like gold on your tongue, poppin’ notes of citrus and berries, with a finish that’s smooth as your best flow.</p> 
-    <div class="card-actions justify-end"> 
-        <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list -->
-        <a href="/singleview" target="_self" class="btn my-2 btn-outline btn-secondary">Køb rosévin!</a> 
-    </div> 
-    </div> 
-    </div> 
-    </div> 
+     <div class="pt-5">
+     <div class="card rounded-4xl bg-base-100 w-90 shadow-sm @container">
+  <figure class="relative px-10 pt-10">
+ <a href="#"> 
+  <img class="rounded-4xl h-90 hover:scale-95 duration-300 ease-in-out" 
+      src="20230326_224852_37C325.webp" alt="Maldiverne"/>
+      </a> 
+  </figure>
+  <div class="card-body">
+    <Heading htmlheading="h2" size="medium" stylingclasses="card-title">Maldiverne, Sri Lanka, Bali, Gili Island, Japan & Australien</Heading>
+    <Heading htmlheading="h2" size="smallbold" stylingclasses="card-tekst">Varighed:</Heading>
+    <Heading htmlheading="h2" size="small" stylingclasses="card-tekst2">3 måneder</Heading>
+    <Heading htmlheading="h2" size="smallbold" stylingclasses="card-tekst3">Pris:</Heading>
+    <Heading htmlheading="h2" size="small" stylingclasses="card-tekst4">89.900.-</Heading>
+   
+    <div class="card-actions justify-end">
+    <Link href="#" variant="primary">Læs mere! →</Link>
+  </div>
+  </div>
+</div>
+     </div>
+ <div class="pt-5">
+<div class="card w-96 bg-orange-50 card-md shadow-xl">
+  <div class="card-body hover:scale-110 duration-300 ease-in-out">
+    <Heading htmlheading="h2" size="smallbold" stylingclasses="card-title">Jakob Søgaard Skjold</Heading>
+    <div class="rating">
+      {
+        Array.from({ length: 5 }, (_, i) => (
+          <div 
+            class={`mask mask-star ${i < 4 ? 'bg-orange-500' : 'bg-orange-900'}`} 
+            aria-label={`${i + 1} star`}
+            aria-current={i + 1 === 4 ? "true" : undefined}
+          ></div>
+        ))
+      }
+    </div>
+    <p class="text-sm md:text-sm leading-relaxed tracking-normal">
+  Den bedste beslutning jeg nogensinde har taget. Kæmpe stor anbefaling!! Det har givet mig en masse mod og lyst til at rejse.
+</p>
+  </div>
+</div>
+</div>
+<div class="pt-5">
+<div class="card w-96 bg-orange-200 card-md shadow-sm">
+  <div class="grid grid-cols-3 items-center px-6 pt-6 gap-4">
+  <Heading htmlheading="h2" size="smallbold" stylingclasses="card-title col-span-2 justify-self-start">Vilde naturoplevelser</Heading>
+  <img 
+    class="w-10 h-10 justify-self-end object-contain col-span-1" 
+    src="bjerg.png"
+    alt="bjerg"
+  />
+</div>
+
+
+  <!-- Card content -->
+  <div class="card-body hover:scale-110 duration-300 ease-in-out">
+    <p class="text-sm md:text-sm leading-relaxed tracking-normal font-normal font-serif">
+      Hvorfor tage på et kedeligt kursus i Danmark, når du kan rejse ud i verden og udvikle dig samtidig? Du rejser sammen med andre unge voksne og lærer en hel masse om samarbejde, relationer, fællesskab, konflikter, styrker og stærke teams. Du får ikke blot rejse-erfaring på cv’et, men også et væld af brugbare redskaber til studie eller karriere.
+    
+    </p>
+  </div>
+</div>
+</div>
 </section>
 <!-- slut på cards -->
 
